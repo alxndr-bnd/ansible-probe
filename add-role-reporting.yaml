@@ -1,0 +1,11 @@
+---
+- name: All servers has role monitoring
+  hosts: all
+  remote_user: root
+
+  tasks:
+  - name: check user reporting exists
+    ansible.builtin.user:
+        name: reporting
+        state: present
+...
